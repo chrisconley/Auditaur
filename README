@@ -1,13 +1,4 @@
 Audit
 =====
 
-Introduction goes here.
-
-
-Example
-=======
-
-Example goes here.
-
-
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Rails plugin that attempts to audit your app code by checking for attr_accessible, sql_injection, asset bundling, exception notifiers, etc....
