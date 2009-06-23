@@ -1,7 +1,7 @@
 class AttrAccessible < ToolSearcher
   def self.requirement
     has?("Attr_accessible set in all active record models") do
-      Matchers.all_files_include_text?(/attr_accessible/, :in => :ar_models)
+      Matcher.all_files_include_text?(/attr_accessible/, :in => :ar_models)
     end
   end
   

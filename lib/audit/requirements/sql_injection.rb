@@ -1,7 +1,7 @@
 class SqlInjection < ToolSearcher
   def self.requirement
     does_not_have?("Sql injection vulnerabilities") do
-      Matchers.any_file_includes_text?(':conditions\s+=>\s+((\"#\{.*\")|((\".*\"\s*\+\s*)*[a-zA-Z]))', :in => :entire_app)
+      Matcher.any_file_includes_text?(Sentinel.sql_injection_regex, :in => :entire_app)
     end
   end
   

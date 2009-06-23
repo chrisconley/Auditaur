@@ -1,5 +1,5 @@
 require 'active_support'
-module Matchers
+module Matcher
   
   class << self
   
@@ -26,16 +26,6 @@ module Matchers
         return true if file_includes_text?(regex, options.merge(:in => file))
       end
       false
-    end
-    
-    def file_includes_method?(name, options)
-      option_regex = options[:with].blank? ? '' : ":#{options[:with]}\s=>"
-      file = options[:in]
-      file_includes_text?("#{name.to_s}.*#{option_regex}", :in => file)
-    end
-  
-    def all_files_include_method?(name, options)
-      all_files_include_article?('method', name, options)
     end
     
     private
